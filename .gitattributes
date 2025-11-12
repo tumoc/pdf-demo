@@ -1,0 +1,28 @@
+# --- Normalize line endings for Windows (.NET/WPF) projects ---
+* text=auto eol=crlf
+
+# --- Binary files (don't touch line endings) ---
+*.dll binary
+*.exe binary
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.gif binary
+*.ico binary
+*.pdf binary
+
+# --- Visual Studio project files ---
+*.cs     text diff=csharp
+*.xaml   text
+*.sln    text eol=crlf
+*.csproj text eol=crlf
+*.vbproj text eol=crlf
+*.props  text eol=crlf
+*.targets text eol=crlf
+*.config text eol=crlf
+*.json   text eol=crlf
+*.xml    text eol=crlf
+*.yml    text eol=lf
+
+# --- Optional: ignore Windows shortcuts ---
+*.lnk binary
