@@ -40,12 +40,7 @@ namespace QuestDemo.Models
       container
           .Section(_sectionName)
           .PaddingBottom(2)
-          .Text(e =>
-          {
-            var page = QuestPdfPageTracker.TryGetCurrentPageNumber(e);
-            if (page.HasValue)
-              _onTracked?.Invoke(_sectionName, page.Value);
-          });
+          .Text("");
     }
   }
 }
