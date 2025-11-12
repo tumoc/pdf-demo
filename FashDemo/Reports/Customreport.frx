@@ -1,0 +1,72 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Report ScriptLanguage="CSharp" ReportInfo.Created="10/13/2025 11:44:12" ReportInfo.Modified="10/13/2025 16:39:27" ReportInfo.CreatorVersion="2025.2.13.0">
+  <Dictionary>
+    <BusinessObjectDataSource Name="TableOfContentsItems" ReferenceName="TableOfContentsItems" DataType="System.Int32" Enabled="true">
+      <Column Name="ID" DataType="System.Int32"/>
+      <Column Name="Title" DataType="System.String"/>
+      <Column Name="Level" DataType="System.String"/>
+      <Column Name="SectionKey" DataType="System.String"/>
+      <Column Name="PageNumber" DataType="System.Int32"/>
+    </BusinessObjectDataSource>
+  </Dictionary>
+  <ReportPage Name="CoverPage" Watermark.Font="Arial, 60pt">
+    <ReportTitleBand Name="CoverTitle" Width="718.2" Height="905.31" Guides="18.9">
+      <TextObject Name="Title" Left="37.8" Top="141.75" Width="642.6" Height="37.8" Border.Lines="Top, Bottom" Border.Color="DodgerBlue" Border.Width="4" Text="BÁO CÁO CRAVR" HorzAlign="Center" Font="Arial, 28pt" TextFill.Color="DodgerBlue"/>
+      <TextObject Name="DateTimeReport" Left="37.8" Top="444.15" Width="642.6" Height="18.9" Text="13-10-2025" HorzAlign="Center" Font="Arial, 14pt"/>
+      <PictureObject Name="Logo" Left="113.4" Top="756" Width="491.4" Height="113.4" ImageFormat="Png" Image="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"/>
+    </ReportTitleBand>
+  </ReportPage>
+  <ReportPage Name="TableOfContentsPage" Watermark.Font="Arial, 60pt">
+    <ReportTitleBand Name="TocTitle" Width="718.2" Height="75.6">
+      <TextObject Name="Text3" Left="37.8" Top="18.9" Width="642.6" Height="37.8" Border.Color="DodgerBlue" Border.Width="4" Text="MỤC LỤC" VertAlign="Center" Font="Arial, 18pt, style=Bold"/>
+    </ReportTitleBand>
+    <PageHeaderBand Name="PageHeader2" Top="79.6" Width="718.2" Height="18.9"/>
+    <DataBand Name="Data2" Top="102.5" Width="718.2" Height="28.35" DataSource="TableOfContentsItems">
+      <TextObject Name="Text19" Left="37.8" Width="567" Height="28.35" Cursor="Hand" Tag="[TableOfContentsItems.SectionKey]" Text="[TableOfContentsItems.Title]" VertAlign="Center" Font="Arial, 12pt"/>
+      <TextObject Name="Text20" Left="604.8" Width="75.6" Height="28.35" Cursor="Hand" Text="[TableOfContentsItems.PageNumber]" HorzAlign="Right" VertAlign="Center" Font="Tahoma, 8pt"/>
+    </DataBand>
+    <PageFooterBand Name="PageFooter2" Top="134.85" Width="718.2" Height="47.25">
+      <TextObject Name="Text11" Left="37.8" Top="9.45" Width="642.6" Height="28.35" Text="[PageN] / [TotalPages]" HorzAlign="Center" VertAlign="Center" Font="Arial, 10pt"/>
+    </PageFooterBand>
+  </ReportPage>
+  <ReportPage Name="ReportInfo" Watermark.Font="Arial, 60pt" Tag="reportinfo">
+    <ReportTitleBand Name="ReportInfoLink" Width="718.2" Height="66.15">
+      <TextObject Name="Text4" Left="37.8" Top="18.9" Width="642.6" Height="28.35" Text="1. Thông tin báo cáo" HorzAlign="Right" Font="Arial, 14pt, style=Bold"/>
+    </ReportTitleBand>
+    <PageHeaderBand Name="PageHeader3" Top="70.15" Width="718.2" Height="349.65">
+      <TextObject Name="Text5" Left="37.8" Top="9.45" Width="302.4" Height="28.35" Border.Lines="Right, Top, Bottom" Text="Số báo cáo" VertAlign="Center" Font="Arial, 12pt, style=Bold"/>
+      <TextObject Name="Text6" Left="340.2" Top="9.45" Width="340.2" Height="28.35" Border.Lines="Top, Bottom" Font="Arial, 10pt"/>
+      <TextObject Name="Text7" Left="37.8" Top="37.8" Width="302.4" Height="28.35" Border.Lines="Right, Top, Bottom" Text="Ngày báo cáo" VertAlign="Center" Font="Arial, 12pt, style=Bold"/>
+      <TextObject Name="Text8" Left="340.2" Top="37.8" Width="340.2" Height="28.35" Border.Lines="Top, Bottom" Font="Arial, 10pt"/>
+      <TextObject Name="Text9" Left="37.8" Top="66.15" Width="302.4" Height="28.35" Border.Lines="Right, Top, Bottom" Text="Thời gian báo cáo" VertAlign="Center" Font="Arial, 12pt, style=Bold"/>
+      <TextObject Name="Text10" Left="340.2" Top="66.15" Width="340.2" Height="28.35" Border.Lines="Top, Bottom" Font="Arial, 10pt"/>
+    </PageHeaderBand>
+    <PageFooterBand Name="PageFooter3" Top="423.8" Width="718.2" Height="47.25">
+      <TextObject Name="Text17" Left="37.8" Top="9.45" Width="642.6" Height="28.35" Text="[PageN] / [TotalPages]" HorzAlign="Center" VertAlign="Center" Font="Arial, 10pt">
+        <Formats>
+          <GeneralFormat/>
+          <GeneralFormat/>
+        </Formats>
+      </TextObject>
+    </PageFooterBand>
+  </ReportPage>
+  <ReportPage Name="CaseInfo" Watermark.Font="Arial, 60pt" Tag="caseinfo">
+    <ReportTitleBand Name="CaseInfoLink" Width="718.2" Height="66.15">
+      <TextObject Name="Text12" Left="37.8" Top="18.9" Width="642.6" Height="28.35" Text="2. Thông tin sự vụ" HorzAlign="Right" Font="Arial, 14pt, style=Bold"/>
+    </ReportTitleBand>
+    <PageHeaderBand Name="PageHeader1" Top="70.15" Width="718.2" Height="113.4">
+      <TextObject Name="Text13" Left="37.8" Top="9.45" Width="302.4" Height="28.35" Border.Lines="Right, Top, Bottom" Text="Tên sự vụ" VertAlign="Center" Font="Arial, 12pt, style=Bold"/>
+      <TextObject Name="Text14" Left="340.2" Top="9.45" Width="340.2" Height="28.35" Border.Lines="Top, Bottom" Font="Arial, 10pt"/>
+      <TextObject Name="Text15" Left="37.8" Top="37.8" Width="302.4" Height="28.35" Border.Lines="Right, Top, Bottom" Text="Mã sự vụ" VertAlign="Center" Font="Arial, 12pt, style=Bold"/>
+      <TextObject Name="Text16" Left="340.2" Top="37.8" Width="340.2" Height="28.35" Border.Lines="Top, Bottom" Font="Arial, 10pt"/>
+    </PageHeaderBand>
+    <PageFooterBand Name="PageFooter1" Top="187.55" Width="718.2" Height="47.25">
+      <TextObject Name="Text18" Left="37.8" Top="9.45" Width="642.6" Height="28.35" Text="[PageN] / [TotalPages]" HorzAlign="Center" VertAlign="Center" Font="Arial, 10pt">
+        <Formats>
+          <GeneralFormat/>
+          <GeneralFormat/>
+        </Formats>
+      </TextObject>
+    </PageFooterBand>
+  </ReportPage>
+</Report>

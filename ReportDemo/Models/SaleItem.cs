@@ -1,0 +1,11 @@
+﻿namespace ReportDemo.Models
+{
+  public class SaleItem
+  {
+    public string ProductName { get; set; } = "";
+    public int Quantity { get; set; }
+    public decimal UnitPrice { get; set; }
+    public decimal TotalPrice => Quantity * UnitPrice;
+    public byte[]? ImageData { get; set; }
+  }
+}

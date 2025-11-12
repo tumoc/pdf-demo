@@ -1,0 +1,61 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Report ScriptLanguage="CSharp" TextQuality="Regular">
+	<Dictionary>
+		<Parameter Name="ReportTitle" DataType="System.String"/>
+		<Parameter Name="ReportDate" DataType="System.String"/>
+		<Parameter Name="CompanyName" DataType="System.String"/>
+		<Parameter Name="LogoImage" DataType="System.Byte[]" BindableControl="Picture"/>
+		<BusinessObjectDataSource Name="Products" ReferenceName="Products" Enabled="true">
+			<Column Name="Id" DataType="System.Int32"/>
+			<Column Name="Name" DataType="System.String"/>
+			<Column Name="Price" DataType="System.Decimal"/>
+			<Column Name="Image" DataType="System.Byte[]"/>
+		</BusinessObjectDataSource>
+	</Dictionary>
+	<!-- ========== PAGE 1: COVER ========== -->
+	<ReportPage Name="CoverPage">
+		<ReportTitleBand Name="CoverBand">
+			<TextObject Name="Title" Top="120" Width="700" Height="50" Font="Arial, 24pt, style=Bold"
+						HorzAlign="Center" Text="[ReportTitle]"/>
+			<TextObject Name="Company" Top="170" Width="700" Height="30" Font="Arial, 12pt"
+						HorzAlign="Center" Text="[CompanyName]"/>
+			<TextObject Name="Date" Top="210" Width="700" Height="30" Font="Arial, 11pt"
+						HorzAlign="Center" Text="[ReportDate]"/>
+			<PictureObject Name="Logo" DataColumn="LogoImage" SizeMode="ZoomImage" Width="200" Height="100"/>
+		</ReportTitleBand>
+	</ReportPage>
+	<!-- ========== PAGE 2: TABLE OF CONTENTS ========== -->
+	<!--<ReportPage Name="TOCPage" StartPageNumber="1" ResetPageNumber="true">
+		<ReportTitleBand Name="TOCTitle" Height="50">
+			<TextObject Name="TocTitle" Width="700" Height="40" Font="Arial, 18pt, style=Bold" Text="MỤC LỤC" HorzAlign="Center"/>
+		</ReportTitleBand>
+
+		<DataBand Name="TOCData" Height="25" DataSource="Products">
+			<TextObject Name="TocItem" Left="40" Width="600" Height="20" Font="Arial, 11pt"
+						Text="[Products.Name]" Hyperlink.Kind="Bookmark" Hyperlink.Value="[Products.Id]" />
+			<LineObject Left="40" Top="22" Width="600" Color="LightGray"/>
+		</DataBand>
+
+		<PageFooterBand Name="FooterTOC" Height="20">
+			<TextObject Name="PageNum" Left="600" Width="100" Text="Trang [Page#]" HorzAlign="Right"/>
+		</PageFooterBand>
+	</ReportPage>-->
+	<!-- ========== PAGE 3+: MAIN CONTENT ========== -->
+	<!--<ReportPage Name="MainPage" StartPageNumber="1" ResetPageNumber="false">
+		<PageHeaderBand Name="Header" Height="40">
+			<TextObject Name="HeaderTitle" Width="700" Height="30" Font="Arial, 14pt, style=Bold" Text="Danh sách sản phẩm" HorzAlign="Center"/>
+			<LineObject Top="35" Width="700"/>
+		</PageHeaderBand>
+
+		<DataBand Name="Data1" Height="60" DataSource="Products" Bookmark="[Products.Id]">
+			<TextObject Name="Id" Left="10" Width="40" Height="20" Text="[Products.Id]" Font="Arial, 10pt"/>
+			<TextObject Name="Name" Left="60" Width="200" Height="20" Text="[Products.Name]" Font="Arial, 10pt, style=Bold"/>
+			<TextObject Name="Price" Left="270" Width="100" Height="20" Text="[Products.Price]" Format="Currency"/>
+			<PictureObject Name="Img" Left="380" Width="50" Height="50" DataColumn="Products.Image" SizeMode="ZoomImage"/>
+		</DataBand>
+
+		<PageFooterBand Name="Footer" Height="20">
+			<TextObject Name="PageNum" Left="600" Width="100" Text="Trang [Page#]" HorzAlign="Right"/>
+		</PageFooterBand>
+	</ReportPage>-->
+</Report>

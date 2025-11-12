@@ -1,0 +1,35 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net8.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Images\download.jpg" />
+    <None Remove="Images\Screenshot_6.png" />
+    <None Remove="Images\Screenshot_7.png" />
+    <None Remove="Images\Screenshot_8.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="QuestPDF" Version="2025.7.3" />
+    <PackageReference Include="SixLabors.ImageSharp" Version="3.1.11" />
+  </ItemGroup>
+	<ItemGroup>
+		<Content Include="Images\**">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+	</ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Images\download.jpg" />
+    <Resource Include="Images\Screenshot_6.png" />
+    <Resource Include="Images\Screenshot_7.png" />
+    <Resource Include="Images\Screenshot_8.png" />
+  </ItemGroup>
+
+</Project>
