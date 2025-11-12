@@ -1,0 +1,19 @@
+# Build results
+[Bb]in/
+[Oo]bj/
+[Oo]ut/
+*.exe
+*.dll
+*.pdb
+*.cache
+*.log
+
+# Visual Studio
+.vs/
+*.user
+*.suo
+
+# Others
+*.db
+*.bak
+*.tmp
